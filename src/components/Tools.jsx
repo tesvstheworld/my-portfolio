@@ -52,9 +52,7 @@ const Tools = () => {
                 alt={`${tool.name} logo`}
                 className="w-20 h-20 mb-4"
               />
-              <p className="text-lg font-semibold text-customBlue2">
-                {tool.name}
-              </p>
+              <p className="text-lg font-semibold text-black">{tool.name}</p>
             </div>
           ))}
         </div>

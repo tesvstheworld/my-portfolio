@@ -7,19 +7,19 @@ const HeroSection = () => {
     AOS.init({
       duration: 1000, // Animation duration in milliseconds
       easing: "ease-in-out", // Easing function for the animation
-      // once: false, // Whether animation should happen only once while scrolling down
     });
   }, []);
 
   return (
     <section
-      className=" text-black min-h-screen flex items-center justify-center"
+      className="text-black min-h-screen flex items-center justify-center"
       data-aos="fade-up"
       data-aos-delay="200"
     >
       <div className="container mx-auto px-6 lg:px-12 text-center">
-        <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-6 ">
-          Hi, I'm <span className="text-customBlue2">[ Teslim ]</span>
+        <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-6">
+          Hi, I'm{" "}
+          <span className="text-customBlue2 whitespace-nowrap">[ Teslim ]</span>
         </h1>
         <p className="text-lg lg:text-xl font-light mb-12 max-w-3xl mx-auto">
           A passionate web developer with expertise in creating modern,
