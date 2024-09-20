@@ -3,12 +3,12 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 // Import logos (Make sure you have the images in the specified folder)
-import htmlLogo from "../assets/html-logo.png"; // Path to HTML logo
-import cssLogo from "../assets/css-logo.png"; // Path to CSS logo
-import jsLogo from "../assets/js-logo.png"; // Path to JavaScript logo
-import reactLogo from "../assets/react-logo.png"; // Path to React logo
-import tailwindLogo from "../assets/tailwind-logo.png"; // Path to Tailwind CSS logo
-import figmaLogo from "../assets/figma-logo.png"; // Path to Figma logo
+import htmlLogo from "../assets/html-logo.svg"; // Path to HTML logo
+import cssLogo from "../assets/css-logo.svg"; // Path to CSS logo
+import jsLogo from "../assets/js-logo.svg"; // Path to JavaScript logo
+import reactLogo from "../assets/react-logo.svg"; // Path to React logo
+import tailwindLogo from "../assets/tailwind-logo.svg"; // Path to Tailwind CSS logo
+import figmaLogo from "../assets/figma-logo.svg"; // Path to Figma logo
 
 const Tools = () => {
   useEffect(() => {

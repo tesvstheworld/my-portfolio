@@ -1,8 +1,16 @@
-import portfolio from "../assets/portfolio.jpeg";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+import portfolio from "../assets/portfolio.jpg";
 import twenty1 from "../assets/2107.jpg";
 import kuda from "../assets/kuda.jpg";
 import kidkind from "../assets/kidkind.jpg";
 import Healthspurt from "../assets/healthspurt.jpg";
+import Furniture from "../assets/furniture app.png";
+import Bank from "../assets/bank app.png";
+import Patricia from "../assets/patricia redesign.png";
+import Laundry from "../assets/laundry app.png";
 
 const projects = [
   {
@@ -24,21 +32,53 @@ const projects = [
     tools: ["HTML", "CSS", "Javascript"],
   },
   {
-    name: "Kindergarten  Website",
+    name: "Kindergarten Website",
     image: kidkind,
     link: "https://yourliveproject.com",
     tools: ["HTML", "CSS", "Javascript"],
   },
   {
-    name: "Healthspurt  Blog",
+    name: "Healthspurt Blog",
     image: Healthspurt,
     link: "https://yourliveproject.com",
     tools: ["HTML", "CSS", "Javascript"],
+  },
+  {
+    name: "Furniture App",
+    image: Furniture,
+    link: "https://yourliveproject.com",
+    tools: ["Figma"],
+  },
+  {
+    name: "Bank App",
+    image: Bank,
+    link: "https://yourliveproject.com",
+    tools: ["Figma"],
+  },
+  {
+    name: "Patricia Remake",
+    image: Patricia,
+    link: "https://yourliveproject.com",
+    tools: ["Figma"],
+  },
+  {
+    name: "Laundry App",
+    image: Laundry,
+    link: "https://yourliveproject.com",
+    tools: ["Figma"],
   },
   // Add more projects here
 ];
 
 const ProjectsPage = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      easing: "ease-in-out", // Easing function for the animation
+      once: true, // Whether animation should happen only once while scrolling down
+    });
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-100 p-8" id="projects">
       <h1 className="text-4xl font-bold text-center mb-12">My Projects</h1>
@@ -47,16 +87,22 @@ const ProjectsPage = () => {
           <div
             key={index}
             className="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transition transform duration-300 ease-in-out"
+            data-aos="zoom-in"
+            data-aos-delay="200"
           >
             <a href={project.link} target="_blank" rel="noopener noreferrer">
-              <img
-                src={project.image}
-                alt={project.name}
-                className="w-full h-56 object-top object-contain"
-              />
+              <div className="flex items-center justify-center bg-gray-200">
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className="w-full object-contain"
+                />
+              </div>
             </a>
             <div className="p-4">
-              <h2 className="text-2xl font-semibold mb-2">{project.name}</h2>
+              <h2 className="text-2xl font-semibold mb-2 text-customBlue2">
+                {project.name}
+              </h2>
               <div className="flex flex-wrap gap-2">
                 {project.tools.map((tool, idx) => (
                   <span

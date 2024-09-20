@@ -20,7 +20,7 @@ const About = () => {
       <div className="max-w-4xl p-6 md:p-10 text-center text-gray-700">
         <h1 className="text-4xl font-bold mb-4 text-customBlue2">About Me</h1>
         <p className="text-lg md:text-xl leading-relaxed">
-          Hi! I'm a passionate web developer based in Abuja,Nigeria & currently
+          Hi! I'm a passionate web developer based in Abuja, Nigeria & currently
           pursuing a degree in Computer Science. My expertise lies in{" "}
           <span className="text-customBlue2 font-bold">UI design</span> and
           building responsive, user-friendly web applications using{" "}

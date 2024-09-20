@@ -2,11 +2,12 @@ import TesLogo from "../assets/Tes Logo.png";
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Logo from "../assets/Logo (2).png";
 
 const navigation = [
   { name: "About", href: "#About" },
   { name: "Skills", href: "#Skills" },
-  { name: "Projects", href: "#" },
+  { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#" },
 ];
 
@@ -17,12 +18,13 @@ export default function Navbar() {
     <header className=" text-white">
       <nav
         aria-label="Global"
-        className="flex items-center justify-between p-4 sm:p-6 lg:mx-8 lg:px-28"
+        className="flex items-center justify-between sm:p-6 lg:px-28 lg:py-2"
       >
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <h1 className="text-customBlue2 font-bold">Tesvstheworld</h1>
+            {/* <h1 className="text-customBlue2 font-bold">Tesvstheworld</h1> */}
+            <img src={Logo} alt="logo" className="w-20" />
           </a>
         </div>
         <div className="flex lg:hidden">
