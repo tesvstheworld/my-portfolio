@@ -1,6 +1,6 @@
-import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const HeroSection = () => {
   useEffect(() => {
@@ -12,11 +12,11 @@ const HeroSection = () => {
 
   return (
     <section
-      className="text-black flex items-center justify-center"
+      className="text-black h-full py-12  flex items-center justify-center sm:min-h-screen"
       data-aos="fade-up"
       data-aos-delay="200"
     >
-      <div className="container mx-auto px-6 my-10 lg:px-12 text-center">
+      <div className="container mx-auto px-6 lg:px-12 text-center">
         <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-6">
           Hi, I'm{" "}
           <span className="text-customBlue2 whitespace-nowrap">[ Teslim ]</span>
