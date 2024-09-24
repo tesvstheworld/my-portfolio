@@ -12,15 +12,25 @@ const navigation = [
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState(""); // Track the active link
+
+  const handleSetActiveLink = (href) => {
+    setActiveLink(href);
+    setMobileMenuOpen(false); // Close the menu on mobile after clicking
+  };
 
   return (
     <header className="text-white">
       <nav
         aria-label="Global"
-        className="flex items-center justify-between p-3 sm:px-6 sm:mx-2 lg:px-28 lg:py-2"
+        className="flex items-center justify-between px-3 sm:px-6 sm:mx-2 lg:px-28  sm:py-0 "
       >
         <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5">
+          <a
+            href="/"
+            className="-m-1.5 p-1.5"
+            onClick={() => setActiveLink("")}
+          >
             <span className="sr-only">Your Company</span>
             <img src={Logo} alt="logo" className="w-20" />
           </a>
@@ -40,7 +50,10 @@ export default function Navbar() {
             <a
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold leading-6 text-customBlue2 hover:text-white"
+              onClick={() => handleSetActiveLink(item.href)}
+              className={`text-sm font-semibold leading-6 ${
+                activeLink === item.href ? "text-white" : "text-customBlue2"
+              } hover:text-white transition-colors duration-300`}
             >
               {item.name}
             </a>
@@ -55,7 +68,11 @@ export default function Navbar() {
         <div className="fixed inset-0 z-50" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-4 py-6 sm:px-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between mx-4">
-            <a href="/" className="-m-1.5 p-1.5">
+            <a
+              href="/"
+              className="-m-1.5 p-1.5"
+              onClick={() => handleSetActiveLink("")}
+            >
               <span className="sr-only">Your Company</span>
               <img alt="Logo" src={Logo} className="h-8 w-auto" />
             </a>
@@ -75,7 +92,12 @@ export default function Navbar() {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    onClick={() => handleSetActiveLink(item.href)}
+                    className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 ${
+                      activeLink === item.href
+                        ? "bg-gray-100 text-customBlue2"
+                        : "text-gray-900 hover:bg-gray-50"
+                    } transition-colors duration-300`}
                   >
                     {item.name}
                   </a>

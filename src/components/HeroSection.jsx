@@ -12,11 +12,11 @@ const HeroSection = () => {
 
   return (
     <section
-      className="text-black min-h-screen flex items-center justify-center"
+      className="text-black flex items-center justify-center"
       data-aos="fade-up"
       data-aos-delay="200"
     >
-      <div className="container mx-auto px-6 lg:px-12 text-center">
+      <div className="container mx-auto px-6 my-10 lg:px-12 text-center">
         <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-6">
           Hi, I'm{" "}
           <span className="text-customBlue2 whitespace-nowrap">[ Teslim ]</span>

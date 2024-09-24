@@ -30,7 +30,7 @@ const Tools = () => {
 
   return (
     <div
-      className=" text-white min-h-screen flex items-center justify-center"
+      className=" text-white  flex items-center justify-center"
       data-aos="fade-up"
       data-aos-delay="200"
       id="Skills"
