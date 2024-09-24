@@ -1,14 +1,15 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
 
 const ContactForm = () => {
-  // Form state
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: "",
     message: "",
   });
+
   const [successMessage, setSuccessMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Handle input change
   const handleChange = (e) => {
@@ -19,68 +20,43 @@ const ContactForm = () => {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
-    // Logic to handle form submission (e.g., sending data to a server)
-    console.log("Form submitted:", formData);
+    // Replace with your EmailJS service ID, template ID, and public key
+    const serviceID = "service_2ly8q9l";
+    const templateID = "template_eo5bini";
+    const publicKey = "pI1wa3XGjkrB3nlm7";
 
-    // Show success message
-    setSuccessMessage("Your message has been sent successfully!");
-
-    // Clear the form fields
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
-
-    // Optionally, you can set a timeout to clear the success message after a few seconds
-    setTimeout(() => {
-      setSuccessMessage("");
-    }, 5000);
+    emailjs.send(serviceID, templateID, formData, publicKey).then(
+      (response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        setSuccessMessage("Message sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
+        setIsSubmitting(false);
+      },
+      (error) => {
+        console.log("FAILED...", error);
+        setIsSubmitting(false);
+      }
+    );
   };
 
   return (
     <div
-      className="min-h-screen flex items-center justify-center px-6"
+      className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12"
       id="contact"
     >
-      <div className="max-w-2xl w-full bg-white rounded-lg shadow-lg p-8">
-        <h2 className="text-3xl font-bold text-center text-customBlue2 mb-6">
-          Contact Us
+      <div className="max-w-lg w-full bg-white rounded-lg shadow-md p-8">
+        <h2 className="text-3xl font-extrabold text-center text-customBlue2 mb-8">
+          Contact Me
         </h2>
-        <p className="text-gray-600 text-center mt-4">
-          Are you interested in collaborating and working with us? Please don’t
-          hesitate to contact us. <br />
-          You can give us a call at{" "}
-          <a href="tel:+23408145622502" className="text-customBlue2">
-            +234-(0)-814-5622-502
-          </a>
-          , or send us an email{" "}
-          <a href="mailto:2107atelier@gmail.com" className="text-customBlue2">
-            2107atelier@gmail.com
-          </a>
-          .
-        </p>
-
-        {/* Success Message */}
-        {successMessage && (
-          <div className="bg-green-100 text-green-800 p-4 rounded-md mb-4">
-            {successMessage}
-          </div>
-        )}
-
-        <form
-          onSubmit={handleSubmit}
-          action="https://formsubmit.co/belloteslim645@gmail.com"
-          method="POST"
-        >
-          <div className="mb-4">
+        <form onSubmit={handleSubmit}>
+          <div className="mb-5">
             <label
               htmlFor="name"
               className="block text-sm font-medium text-gray-700"
             >
-              Full Name
+              Name
             </label>
             <input
               type="text"
@@ -89,31 +65,12 @@ const ContactForm = () => {
               value={formData.name}
               onChange={handleChange}
               className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-customBlue2 focus:border-customBlue2"
-              placeholder="Enter your name"
+              placeholder="Your Name"
               required
             />
           </div>
 
-          <div className="mb-4">
-            <label
-              htmlFor="phone"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Phone No.
-            </label>
-            <input
-              type="tel"
-              name="phone"
-              id="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-customBlue2 focus:border-customBlue2"
-              placeholder="123 456 7890"
-              required
-            />
-          </div>
-
-          <div className="mb-4">
+          <div className="mb-5">
             <label
               htmlFor="email"
               className="block text-sm font-medium text-gray-700"
@@ -127,7 +84,7 @@ const ContactForm = () => {
               value={formData.email}
               onChange={handleChange}
               className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-customBlue2 focus:border-customBlue2"
-              placeholder="Enter Email"
+              placeholder="Your Email"
               required
             />
           </div>
@@ -137,16 +94,16 @@ const ContactForm = () => {
               htmlFor="message"
               className="block text-sm font-medium text-gray-700"
             >
-              Your Message
+              Message
             </label>
             <textarea
               name="message"
               id="message"
               value={formData.message}
               onChange={handleChange}
-              rows="6"
+              rows="5"
               className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-customBlue2 focus:border-customBlue2"
-              placeholder="Enter your message"
+              placeholder="Your Message"
               required
             />
           </div>
@@ -154,12 +111,18 @@ const ContactForm = () => {
           <div className="text-center">
             <button
               type="submit"
-              className="w-full py-3 bg-customBlue2 text-white rounded-md hover:bg-customBlue3 transition duration-300 ease-in-out"
+              className={`w-full py-3 px-4 bg-customBlue2 text-white rounded-md font-semibold hover:bg-customBlue3 transition-all duration-300 ease-in-out ${
+                isSubmitting ? "opacity-50 cursor-not-allowed" : ""
+              }`}
+              disabled={isSubmitting}
             >
-              Send Message
+              {isSubmitting ? "Sending..." : "Send Message"}
             </button>
           </div>
         </form>
+        {successMessage && (
+          <p className="mt-4 text-green-600 text-center">{successMessage}</p>
+        )}
       </div>
     </div>
   );
