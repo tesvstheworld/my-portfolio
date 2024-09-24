@@ -59,7 +59,7 @@ const Footer = () => {
         {/* Links */}
         <div className="text-center md:text-right space-y-2">
           <a
-            href="#about"
+            href="#About"
             className="text-sm text-black pr-2 hover:text-white transition duration-300 ease-in-out"
           >
             About
@@ -71,10 +71,10 @@ const Footer = () => {
             Projects
           </a>
           <a
-            href="#contact"
+            href="#tools"
             className="text-sm text-black hover:text-white transition duration-300 ease-in-out"
           >
-            Contact
+            Tools
           </a>
         </div>
       </div>
