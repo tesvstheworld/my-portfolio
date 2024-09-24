@@ -71,7 +71,7 @@ const Footer = () => {
             Projects
           </a>
           <a
-            href="#tools"
+            href="#Skills"
             className="text-sm text-black hover:text-white transition duration-300 ease-in-out"
           >
             Tools
