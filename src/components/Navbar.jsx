@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Logo from "../assets/Logo (2).png";
+import Logo from "../assets/logo2.png";
 
 const navigation = [
   { name: "About", href: "#About" },
@@ -20,10 +20,10 @@ export default function Navbar() {
   };
 
   return (
-    <header className="text-white">
+    <header className="text-white fixed w-full z-50">
       <nav
         aria-label="Global"
-        className="flex items-center justify-between px-3 sm:px-6 sm:mx-2 lg:px-28  sm:py-0 "
+        className="flex items-center justify-between px-3 sm:px-6 sm:mx-2 lg:px-28 sm:py-0 bg-customBlue2 "
       >
         <div className="flex lg:flex-1">
           <a
@@ -52,7 +52,7 @@ export default function Navbar() {
               href={item.href}
               onClick={() => handleSetActiveLink(item.href)}
               className={`text-sm font-semibold leading-6 ${
-                activeLink === item.href ? "text-white" : "text-customBlue2"
+                activeLink === item.href ? "text-white" : "text-white"
               } hover:text-white transition-colors duration-300`}
             >
               {item.name}

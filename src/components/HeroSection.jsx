@@ -12,7 +12,7 @@ const HeroSection = () => {
 
   return (
     <section
-      className="text-black min-h-fit lg:min-h-screen flex items-center justify-center py-12"
+      className="text-black min-h-fit lg:min-h-screen flex items-center justify-center pt-36"
       data-aos="fade-up"
       data-aos-delay="200"
     >
