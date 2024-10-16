@@ -3,8 +3,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import portfolio from "../assets/portfolio.jpg";
-import twenty1 from "../assets/2107.jpg";
-import kuda from "../assets/kuda.jpg";
+import twenty1 from "../assets/2107.png";
+import kuda from "../assets/kuda.png";
 import kidkind from "../assets/kidkind.jpg";
 import Healthspurt from "../assets/healthspurt.jpg";
 import Furniture from "../assets/furniture app.png";
@@ -86,7 +86,7 @@ const ProjectsPage = () => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transition transform duration-300 ease-in-out"
+            className="bg-white shadow-sm rounded-lg overflow-hidden hover:scale-105 transition transform duration-300 ease-in-out"
             data-aos="zoom-in"
             data-aos-delay="200"
           >

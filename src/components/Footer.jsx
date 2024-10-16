@@ -1,7 +1,7 @@
 import React from "react";
 import { FaInstagram, FaGithub, FaBehance } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import logo from "../assets/Logo (2).png";
+import Logo from "../assets/logo2.png";
 
 const Footer = () => {
   return (
@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between">
         {/* Logo and Brand Name */}
         <div className="flex items-center mb-4 md:mb-0">
-          <img src={logo} alt="Logo" className="h-10 w-10 mr-3" />
+          <img src={Logo} alt="Logo" className="h-10 w-10 mr-3" />
           <span className="text-xl font-semibold text-customBlue2">
             Tesvstheworld
           </span>

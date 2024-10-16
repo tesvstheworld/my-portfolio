@@ -30,13 +30,13 @@ const HeroSection = () => {
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a
             href="#projects"
-            className="bg-customBlue2 text-black-600 px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg font-medium hover:bg-transparent border border-customBlue2 transition-all"
+            className="bg-customBlue2 text-white px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg font-medium hover:bg-transparent hover:text-customBlue2 border border-customBlue2 transition-all"
           >
             View My Work
           </a>
           <a
             href="#contact"
-            className="bg-transparent border border-customBlue2 px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg font-medium text-customBlue2 hover:bg-customBlue2 hover:text-black transition-all"
+            className="bg-transparent border border-customBlue2 px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg font-medium text-customBlue2 hover:bg-customBlue2 hover:text-white transition-all"
           >
             Get In Touch
           </a>
