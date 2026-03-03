@@ -10,7 +10,7 @@ const Footer = () => {
         {/* Logo and Brand Name */}
         <div className="flex items-center mb-4 md:mb-0">
           <img src={Logo} alt="Logo" className="h-10 w-10 mr-3" />
-          <span className="text-xl font-semibold text-customBlue2">
+          <span className="text-xl font-semibold text-gray-800">
             Tesvstheworld
           </span>
         </div>
@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="flex space-x-6 mb-4 md:mb-0">
           <a
             href="https://github.com/tesvstheworld"
-            className="text-gray-400 hover:text-customBlue2 transition duration-300 ease-in-out"
+            className="text-gray-400 hover:text-gray-800 transition duration-300 ease-in-out"
             aria-label="GitHub"
             target="_blank"
             rel="noopener noreferrer"
@@ -28,7 +28,7 @@ const Footer = () => {
           </a>
           <a
             href="https://x.com/tesvstheworld?s=21"
-            className="text-gray-400 hover:text-customBlue2 transition duration-300 ease-in-out"
+            className="text-gray-400 hover:text-gray-800 transition duration-300 ease-in-out"
             aria-label="Twitter"
             target="_blank"
             rel="noopener noreferrer"
@@ -37,7 +37,7 @@ const Footer = () => {
           </a>
           <a
             href="https://www.instagram.com/tesvstheworld/"
-            className="text-gray-400 hover:text-customBlue2 transition duration-300 ease-in-out"
+            className="text-gray-400 hover:text-gray-800 transition duration-300 ease-in-out"
             aria-label="Instagram"
             target="_blank"
             rel="noopener noreferrer"
@@ -47,7 +47,7 @@ const Footer = () => {
 
           <a
             href="https://www.behance.net/tesvstheworld"
-            className="text-gray-400 hover:text-customBlue2 transition duration-300 ease-in-out"
+            className="text-gray-400 hover:text-gray-800 transition duration-300 ease-in-out"
             aria-label="Behance"
             target="_blank"
             rel="noopener noreferrer"

@@ -23,7 +23,7 @@ export default function Navbar() {
     <header className="text-white fixed w-full z-50">
       <nav
         aria-label="Global"
-        className="flex items-center justify-between px-3 sm:px-6 sm:mx-2 lg:px-28 sm:py-0 bg-customBlue2 "
+        className="flex items-center justify-between px-3 sm:px-6 sm:mx-2 lg:px-28 sm:py-0 bg-neutral-800 "
       >
         <div className="flex lg:flex-1">
           <a

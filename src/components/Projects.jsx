@@ -29,7 +29,7 @@ const projects = [
     name: "Kuda Landing Page",
     image: kuda,
     link: "https://kudabytes.netlify.app",
-    tools: ["HTML", "CSS", "Javascript"],
+    tools: ["React", "Tailwind"],
   },
   {
     name: "Healthspurt Blog",
@@ -100,7 +100,7 @@ const ProjectsPage = () => {
               </div>
             </a>
             <div className="p-4">
-              <h2 className="text-2xl font-semibold mb-2 text-customBlue2">
+              <h2 className="text-2xl font-semibold mb-2 text-gray-800">
                 {project.name}
               </h2>
               <div className="flex flex-wrap gap-2">

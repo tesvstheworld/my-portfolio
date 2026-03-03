@@ -47,7 +47,7 @@ const ContactForm = () => {
       id="contact"
     >
       <div className="max-w-lg w-full bg-white rounded-lg shadow-md p-8">
-        <h2 className="text-3xl font-extrabold text-center text-customBlue2 mb-8">
+        <h2 className="text-3xl font-extrabold text-center text-gray-800 mb-8">
           Contact Me
         </h2>
         <form onSubmit={handleSubmit}>
@@ -64,7 +64,7 @@ const ContactForm = () => {
               id="name"
               value={formData.name}
               onChange={handleChange}
-              className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-customBlue2 focus:border-customBlue2"
+              className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-gray-800 focus:border-gray-800"
               placeholder="Your Name"
               required
             />
@@ -83,7 +83,7 @@ const ContactForm = () => {
               id="email"
               value={formData.email}
               onChange={handleChange}
-              className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-customBlue2 focus:border-customBlue2"
+              className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-gray-800 focus:border-gray-800"
               placeholder="Your Email"
               required
             />
@@ -102,7 +102,7 @@ const ContactForm = () => {
               value={formData.message}
               onChange={handleChange}
               rows="5"
-              className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-customBlue2 focus:border-customBlue2"
+              className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-gray-800 focus:border-gray-800"
               placeholder="Your Message"
               required
             />
@@ -111,7 +111,7 @@ const ContactForm = () => {
           <div className="text-center">
             <button
               type="submit"
-              className={`w-full py-3 px-4 bg-customBlue2 text-white rounded-md font-semibold hover:bg-customBlue3 transition-all duration-300 ease-in-out ${
+              className={`w-full py-3 px-4 bg-gray-800 text-white rounded-md font-semibold hover:bg-customBlue3 transition-all duration-300 ease-in-out ${
                 isSubmitting ? "opacity-50 cursor-not-allowed" : ""
               }`}
               disabled={isSubmitting}

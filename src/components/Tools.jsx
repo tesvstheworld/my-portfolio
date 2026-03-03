@@ -36,7 +36,7 @@ const Tools = () => {
       id="Skills"
     >
       <div className="max-w-4xl text-center p-6">
-        <h1 className="text-4xl font-bold mb-20 text-customBlue2">
+        <h1 className="text-4xl font-bold mb-20 text-gray-800">
           Tools I Work With
         </h1>
 

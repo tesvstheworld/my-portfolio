@@ -19,24 +19,27 @@ const HeroSection = () => {
       <div className="container mb-14 px-6 lg:px-12 text-center">
         <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold leading-tight mb-4 sm:mb-6">
           Hi, I'm{" "}
-          <span className="text-customBlue2 whitespace-nowrap">[ Teslim ]</span>
+          <span className="text-gray-800 whitespace-nowrap">[ Teslim ]</span>
         </h1>
         <p className="text-base sm:text-lg lg:text-xl font-light mb-8 sm:mb-12 max-w-3xl mx-auto">
-          A passionate web developer with expertise in creating modern,
+          A passionate Frontend developer with expertise in creating modern,
           responsive websites and web apps using the latest technologies like
           React, Tailwind CSS, and more, with experience in UI design to ensure
           intuitive and user-friendly interfaces.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
+          {/* View My Work - Offwhite text, Charcoal background, Offwhite border */}
           <a
             href="#projects"
-            className="bg-customBlue2 text-white px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg font-medium hover:bg-transparent hover:text-customBlue2 border border-customBlue2 transition-all"
+            className="bg-gray-800 text-gray-50 px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg font-medium hover:bg-gray-50 hover:text-gray-800 border border-gray-50 transition-all"
           >
             View My Work
           </a>
+
+          {/* Get In Touch - Charcoal text, Offwhite background, Charcoal border */}
           <a
             href="#contact"
-            className="bg-transparent border border-customBlue2 px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg font-medium text-customBlue2 hover:bg-customBlue2 hover:text-white transition-all"
+            className="bg-gray-50 text-gray-800 px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg font-medium hover:bg-gray-800 hover:text-gray-50 border border-gray-800 transition-all"
           >
             Get In Touch
           </a>

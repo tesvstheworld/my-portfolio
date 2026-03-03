@@ -7,39 +7,46 @@ const About = () => {
     AOS.init({
       duration: 1000, // Animation duration in milliseconds
       easing: "ease-in-out", // Easing function for the animation
-      // once: false, // Whether animation should happen only once while scrolling down
     });
   }, []);
+
   return (
     <div
-      className=" text-white  flex items-center justify-center"
+      className="text-white flex items-center justify-center"
       id="About"
       data-aos="fade-up"
       data-aos-delay="200"
     >
       <div className="max-w-4xl p-6 md:p-10 text-center text-black">
-        <h1 className="text-4xl font-bold mb-4 text-customBlue2">About Me</h1>
+        <h1 className="text-4xl font-bold mb-6 text-gray-800">About Me</h1>
+
         <p className="text-lg md:text-xl leading-relaxed">
-          Hi! I'm a passionate web developer based in Abuja, Nigeria & currently
-          pursuing a degree in Computer Science. My expertise lies in{" "}
-          <span className="text-customBlue2 font-bold">UI design</span> and
-          building responsive, user-friendly web applications using{" "}
-          <span className="text-customBlue2 font-bold">React</span> and{" "}
-          <span className="text-customBlue2 font-bold">Tailwind CSS</span>.
+          I’m a{" "}
+          <span className="text-gray-800 font-bold">
+            Computer Science graduate
+          </span>{" "}
+          with a strong foundation in
+          <span className="text-gray-800 font-bold">
+            {" "}
+            software engineering
+          </span>{" "}
+          and
+          <span className="text-gray-800 font-bold"> product strategy</span>. I
+          specialize in building responsive, high-performance web applications
+          using modern frontend technologies.
         </p>
 
         <p className="mt-4 text-lg md:text-xl leading-relaxed">
-          I have ventured into{" "}
-          <span className="text-customBlue2 font-bold">graphics design</span>,{" "}
-          <span className="text-customBlue2 font-bold">UI/UX</span>, and{" "}
-          <span className="text-customBlue2 font-bold">product management</span>
-          , which have enhanced my understanding of creating user-centric
-          digital experiences. Currently, I'm interning at{" "}
-          <span className="text-customBlue2 font-bold">Leadway Assurance</span>,
-          where I'm learning and growing as a developer.
+          With experience in{" "}
+          <span className="text-gray-800 font-bold">product management</span>{" "}
+          and
+          <span className="text-gray-800 font-bold"> UI/UX design</span>, I
+          approach development with a user-first mindset, ensuring that every
+          interface not only looks modern but drives
+          <span className="text-gray-800 font-bold"> measurable impact</span>.
         </p>
 
-        <p className="mt-4 text-lg md:text-xl leading-relaxed">
+        <p className="mt-6 text-lg md:text-xl leading-relaxed italic">
           I’m always eager to learn new technologies and push the boundaries of
           what can be achieved in web development. Let’s create something
           amazing!
